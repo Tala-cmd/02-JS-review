@@ -237,4 +237,12 @@ const adventureBooks = books
 console.log(adventureBooks)
 
 const pagesAllBooks = books.reduce((acc, e) => acc + e.pages, 0)
-console.log(pagesAllBooks)
+console.log(pagesAllBooks);
+
+const array1 = [3, 7,1,9,6]
+const sorted= array1.slice().sort((a,b) => a - b)
+console.log(sorted)
+
+const sortedByPages= books.slice().sort((a,b) => a.pages - b.pages)
+.map((e) => e.title)
+console.log(sortedByPages) //Shows the name of books from least to highest number of pages
