@@ -244,5 +244,25 @@ const sorted= array1.slice().sort((a,b) => a - b)
 console.log(sorted)
 
 const sortedByPages= books.slice().sort((a,b) => a.pages - b.pages)
-.map((e) => e.title)
+.map((e) => e.title + ' Number of pages:' + e.pages)
 console.log(sortedByPages) //Shows the name of books from least to highest number of pages
+
+// 1. Add book object to array
+
+const newBook = {
+  id:6,
+  title: 'Harry Potter and the Chamber of Secrets',
+  author: 'J. K. Rowling'
+}
+
+const booksAfterAdd = [...books, newBook]
+
+// 2. Delete book object from array
+
+const booksAfterDelete = booksAfterAdd.filter((e) => e.id !== 3)
+console.log(booksAfterDelete)
+
+// 3 . Update book object from array
+
+const booksAfterUpdate = books.map((e) => e.id===1 ? {...e, title:'tala'} : e)
+console.log(booksAfterUpdate)
